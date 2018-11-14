@@ -1,0 +1,27 @@
+<div class="b row row-center col-center">
+	<div class="vh bg1" style="height:40vh;width:25vw">
+		<div class="b">
+			<form  class="b" #loginForm="ngForm">
+				<div class="b lrp">
+					<div class="h btm">
+						<h5 class="xsfs lw clr">User ID</h5>
+					 	<div class="h brd bBrd row row-start col-center" style="margin-top:0.5vh;">      
+							<input name="id" #name="ngModel" maxlength="100" class="xfs" [(ngModel)]="user" style="margin-bottom: 0.5vh;" type="text" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm">
+						<h5  class="xsfs lw clr">Password</h5>
+					 	<div class="h brd bBrd" style="margin-top:0.5vh;" layout="row" layout-align="start center">      
+							<input name="password" #name="ngModel" maxlength="100" class="xfs" [(ngModel)]="password" style="margin-bottom: 0.5vh;" type="password" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm" layout="row" layout-align="center center">
+						<div class="vh pt lm" (click)="loginFunc(user,password)" style="width:4vw;background:#67d06a;padding:0.5vh 1vh 0.5vh 1vh" layout="row" layout-align="center center">
+							<h5 class="xfs lw clr">LOGIN</h5>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

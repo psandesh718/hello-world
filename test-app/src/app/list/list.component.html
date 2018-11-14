@@ -1,0 +1,66 @@
+<div class="b">
+	<div class="h" style="height:10vh;background:#1976d2" layout="row" layout-align="start center">
+		<i class="lrm material-icons clr3 pt" (click)="addUser($event)">add_circle_outline</i>
+		<h5 class="xfs hw clr3" style="font-size:4vh">USER LIST</h5>
+	</div>
+	<div class="h p" style="height:calc(100% - 10vh)">
+		<div class="b bg2">
+			<div class="h brd bBrd" style="height:8vh">
+				<div class="v" style="width:10vw" layout="row" layout-align="center center">
+					<h5 class="xfs mw clr" style="font-size:2.7vh">User ID</h5>
+				</div>
+				<div class="v" style="width:30vw" layout="row" layout-align="center center">
+					<h5 class="xfs mw clr" style="font-size:2.7vh">Name</h5>
+				</div>
+				<div class="v" style="width:20vw" layout="row" layout-align="center center">
+					<h5 class="xfs mw clr" style="font-size:2.7vh">Designation</h5>
+				</div>
+				<div class="v" style="width:20vw" layout="row" layout-align="center center">
+					<h5 class="xfs mw clr" style="font-size:2.7vh">Contact Number</h5>
+				</div>
+			</div>
+			<div class="h" style="height:calc(100% - 8vh);overflow-y:auto">
+				<div class="h brd bBrd" style="height:8vh" *ngFor="let user of usersArr" layout="row" layout-align="start center">
+					<div class="v" style="width:10vw" layout="row" layout-align="center center">
+						<h5 class="xfs lw clr">{{user.ID}}</h5>
+					</div>
+					<div class="v" style="width:30vw" layout="row" layout-align="center center">
+						<h5 class="xfs lw clr">{{user.TITLE}}</h5>
+					</div>
+					<div class="v" style="width:20vw" layout="row" layout-align="center center">
+						<h5 class="xfs lw clr">{{user.DESIGNATION}}</h5>
+					</div>
+					<div class="v" style="width:20vw" layout="row" layout-align="center center">
+						<h5 class="xfs lw clr">{{user.CONTACT}}</h5>
+					</div>
+					<div class="v" style="width:calc(100% - 80vw)" layout="row" layout-align="center center">
+						<div class="vh pt" style="background:#67d06a;padding:0.5vh 1vh 0.5vh 1vh">
+							<h5 class="xfs lw clr">Edit</h5>
+						</div>
+						<div class="vh pt lm" style="background:#f44336;padding:0.5vh 1vh 0.5vh 1vh">
+							<h5 class="xfs lw clr">Delete</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="b" *ngIf="addUserFlag" style="position:absolute;">
+		<app-add (closeAddUser)="closeAddUser($event)" (createUser)="createUser($event)"></app-add>
+	</div>
+</div>
+
+<!--  <div class='b'>
+ 	<div class="vh car column col-center" style="position:absolute;height:100px;width:250px;">
+ 		<div class="vh" style="height:50px;width:150px;background:red;"></div>
+ 		<div class="h" style="height:50px;background:red;"></div>
+ 	</div>
+ 	<div class="fisrt" style="position:absolute;background:gray;height:50px;width:50px;border-radius:50%;top:75px">
+ 		<div class="vh" style="position:absolute;width:50px;height:1px;top:24.5px;background:black;"></div>
+ 		<div class="vh" style="position:absolute;width:1px;height:50px;left:24.5px;background:black;"></div>
+ 	</div>
+ 	<div class="last" style="position:absolute;background:gray;height:50px;width:50px;border-radius:50%;top:75px">
+ 		<div class="vh" style="position:absolute;width:50px;height:1px;top:24.5px;background:black;"></div>
+ 		<div class="vh" style="position:absolute;width:1px;height:50px;left:24.5px;background:black;"></div>
+ 	</div>
+ </div> -->
