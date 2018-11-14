@@ -1,0 +1,45 @@
+<div class="b" style="background:#0000006b" layout="row" layout-align="center center">
+	<div class="vh bg1" style="height:60vh;width:25vw">
+		<div class="h" style="height:8vh" layout="row" layout-align="center center">
+			<h5 class="xlfs mw clr">ADD USER</h5>
+		</div>
+		<div class="h" style="height:calc(100%-8vh)">
+			<form  class="b" #userForm="ngForm">
+				<div class="b lrp">
+					<div class="h btm">
+						<h5 class="xsfs lw clr">User ID</h5>
+					 	<div class="h brd bBrd" style="margin-top:0.5vh;" layout="row" layout-align="start center">      
+							<input name="id" #name="ngModel" maxlength="100" class="xfs" [(ngModel)]="userObj.ID" style="margin-bottom: 0.5vh;" type="number" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm">
+						<h5  class="xsfs lw clr">Name</h5>
+					 	<div class="h brd bBrd" style="margin-top:0.5vh;" layout="row" layout-align="start center">      
+							<input name="name" #name="ngModel" maxlength="100" class="xfs" [(ngModel)]="userObj.TITLE" style="margin-bottom: 0.5vh;" type="text" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm">
+						<h5  class="xsfs lw clr">Designation</h5>
+					 	<div class="h brd bBrd" style="margin-top:0.5vh;" layout="row" layout-align="start center">      
+							<input name="designation" #name="ngModel" maxlength="100" class="xfs" [(ngModel)]="userObj.DESIGNATION" style="margin-bottom: 0.5vh;" type="text" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm">
+						<h5  class="xsfs lw clr">Contact</h5>
+					 	<div class="h brd bBrd" style="margin-top:0.5vh;" layout="row" layout-align="start center">      
+							<input name="contact" #name="ngModel" maxlength="10" class="xfs" [(ngModel)]="userObj.CONTACT" style="margin-bottom: 0.5vh;" type="number" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm" layout="row" layout-align="space-around center">
+						<div class="vh pt" (click)="close($event)" style="width:4vw;background:#f44336;padding:0.5vh 1vh 0.5vh 1vh" layout="row" layout-align="center center">
+							<h5 class="xfs lw clr">Cancel</h5>
+						</div>
+						<div class="vh pt lm" (click)="create($event)" style="width:4vw;background:#67d06a;padding:0.5vh 1vh 0.5vh 1vh" layout="row" layout-align="center center">
+							<h5 class="xfs lw clr">Add</h5>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

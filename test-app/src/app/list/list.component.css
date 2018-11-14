@@ -1,0 +1,26 @@
+.car {
+  animation: carModel 2s linear infinite;
+}
+
+@keyframes carModel {
+  0% {left:0;}
+  100% {left:600px;}
+}
+
+.fisrt {
+  animation: firstW 2s linear infinite;
+}
+
+@keyframes firstW {
+  0% {left:25px;transform: rotate(0deg);}
+  100% {left:625px;transform: rotate(359deg);}
+}
+
+.last {
+  animation: lastW 2s linear infinite;
+}
+
+@keyframes lastW {
+  0% {left:175px;transform: rotate(0deg);}
+  100% {left:775px;transform: rotate(359deg);}
+}
